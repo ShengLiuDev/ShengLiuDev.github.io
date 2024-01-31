@@ -31,6 +31,14 @@ $(document).ready(function(){
         $('.menu-btn i').toggleClass("active");
     });
 
+    var typed = new Typed(".typing", {
+        strings: ["student at the University of Florida",
+        "aspiring software engineer", "foodie", "homecook (for fun)"],
+        typeSpeed: 80,
+        backSpeed: 20,
+        loop: true
+        });
+    
     
 
     
