@@ -26,6 +26,10 @@ body{
 .home {
     padding: 0px 200px;
     box-sizing: border-box;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    position: absolute;
     /* position: absolute; */
 }
 nav{
@@ -89,6 +93,14 @@ nav ul li a:hover::after{
     font-size: 40px;
     margin: 5px 0;
 }
+.home-content {
+    position: absolute;
+    top: 40%;
+    text-align: left;
+    width: 100%;
+    min-width: 1000px;
+    /* transform: translateY(40%); */
+}
 .introduction-container {
     color: black;
     background-color: #fff;
@@ -100,22 +112,32 @@ nav ul li a:hover::after{
     border: 70px solid #fff;
 }
 .about-me-underline {
-    width: 225px;
+    width: 250px;
     margin-top: 10px !important;
     height: 4px;
     background-color: black;
     margin: auto;
 }
+.headshot-introduction-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
 .headshot-picture {
     padding-left: 100px;
-    padding-right: 50px;
+    padding-right: 400px;
     padding-bottom: 180px;
-    float: left;
+    flex: 1;
+    max-width: 375px;
 }
 .introduction-text {
-    font-size: 20px;
+    font-size: 19px;
     padding-left: 50px;
     padding-bottom: 300px;
+    padding-right: 100px;
+    padding-top: 30px;
     background-color: white;
     word-spacing: 4px;
+    max-width: 900px;
 }
