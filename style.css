@@ -22,54 +22,65 @@ body{
 }
 .container{
     padding: 10px 10%;
+    display: flex;
+    justify-content: flex-end;
 }
 .home {
     padding: 0px 200px;
     box-sizing: border-box;
     display: flex;
-    /* justify-content: center; */
     align-items: center;
     position: absolute;
-    /* position: absolute; */
+    
 }
-nav{
+.navbar{
+    position: fixed;
+    align-items: center;
+    width: 100%;
+    z-index: 1;
+    padding: 30px 0;
+    font-family: 'Ubuntu', sans-serif;
+    transition: all 0.3s ease;
+}
+.navbar.sticky{
+    padding: 25px 0;
+    background: black;
+}
+.navbar .max-width{
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    justify-content: flex-end;
+    padding-right: 100px;
 }
-.logo{
-    width: 140px;
-
+.navbar .menu .logo-icons {
+    display: inline;
+    margin-top: 50px;
 }
-
-nav ul li{
-    display: inline-block;
+.navbar .menu li{
     list-style: none;
-    margin: 10px 20px;
-
+    display: inline-block;
 }
-
-nav ul li a{
-    color: #fff;
+.navbar .menu li a{
+    display: block;
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    margin-top: -25px;
     text-decoration: none;
-    font-size: 25px;
+    margin-left: 25px;
+    transition: color 0.3s ease;
     position: relative;
+    justify-content: flex-end;
 }
-
-nav ul li a::after{
-    content: '';
-    width: 0;
-    height: 3px;
-    background: #277FD8;
-    position: absolute;
-    left: 0;
-    bottom: -6px;
-    transition: 0.5s;
+.navbar .menu li a:hover{
+    color: #277FD8;
 }
-
-nav ul li a:hover::after{
-    width: 100%;
+.navbar.sticky .menu li a:hover{
+    color: #277FD8;
+}
+.linkedin-github-logos img {
+    border-radius: 200px;
+    transform: translateY(30%);
 }
 .text-1{
     margin-top: 40%;
@@ -99,7 +110,7 @@ nav ul li a:hover::after{
     text-align: left;
     width: 100%;
     min-width: 1000px;
-    /* transform: translateY(40%); */
+    transform: translateY(-25%);
 }
 .introduction-container {
     color: black;
