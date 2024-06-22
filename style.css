@@ -152,3 +152,65 @@ body{
     word-spacing: 4px;
     max-width: 900px;
 }
+.experience {
+    padding: 100px;
+}
+.experience .title {
+    padding-bottom: 50px;
+}
+.experience, .projects{
+    color:#fff;
+    background: #111;
+}
+.experience .title::before,
+.projects .title::before{
+    background: #fff;
+}
+.experience .title {
+    font-size: 50px;
+    text-align: center;
+}
+.experience .experience-underline {
+    width: 300px;
+    margin-top: 10px !important;
+    height: 4px;
+    background-color: black;
+    margin: auto;
+}
+.experience .serv-content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.experience .serv-content .card{
+    width: 370px;
+    background: #222;
+    text-align: center;
+    border-radius: 6px;
+    padding: 50px 25px;
+    transition: all 0.3s ease;
+    margin: 10px 5px;
+}
+.experience .serv-content .card:hover{
+    background: limegreen;
+}
+.experience .serv-content .card .box{
+    transition: all 0.3s ease;
+}
+.experience .serv-content .card:hover .box{
+    transform: scale(1.05);
+}
+.experience .serv-content .card i{
+    font-size: 50px;
+    color: limegreen;
+    transition: color 0.3s ease;
+}
+.experience .serv-content .card:hover i{
+    color: #fff;
+}
+.experience .serv-content .card .text{
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 0 7px 0;
+}
