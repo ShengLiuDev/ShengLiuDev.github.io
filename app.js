@@ -33,7 +33,7 @@ $(document).ready(function () {
     // Add console logs for debugging
     try {
         var typed = new Typed(".typing", {
-            strings: ["Student at the University of Florida", "Fullstack Engineer", "Software Engineer", "Data Scientist"],
+            strings: ["Student at the University of Florida", "Fullstack Engineer", "Software Engineer", "Data Scientist", "Researcher"],
             typeSpeed: 80,
             backSpeed: 20,
             loop: true
