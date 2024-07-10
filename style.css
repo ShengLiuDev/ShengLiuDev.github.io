@@ -10,7 +10,7 @@ html{
     scroll-behavior: smooth;
 }
 body{
-    background: #080808;
+    background: white;
     color: #fff;
 }
 #header{
@@ -113,27 +113,46 @@ body{
     transform: translateY(-25%);
 }
 .introduction-container {
-    color: black;
-    background-color: #fff;
+    color: honeydew;
+    background-color: white;
+    margin-top: 30px;
+    scroll-margin-top: 75px;
+    background: url(images/double-wave.png) no-repeat center top;
+    background-size: cover;
+}
+
+.svg-title-container {
+    position: relative;
+    background-color: transparent;
+    /* background: url(images/double-wave.png); */
 }
 .about-me {
     font-size: 50px;
     text-align: center;
     font-weight: bold;
-    border: 70px solid #fff;
+    color: honeydew;
+    position: absolute; /* Absolutely position the title */
+    top: 50px; /* Adjust as necessary */
+    left: 50%;
+    transform: translateX(-50%); /* Center the title horizontally */
+    width: 100%;
 }
 .about-me-underline {
     width: 250px;
-    margin-top: 10px !important;
+    margin-top: 5px !important;
     height: 4px;
-    background-color: black;
+    background-color: honeydew;
     margin: auto;
+    border: none;
 }
 .headshot-introduction-section {
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 0 auto;
+    margin-top: -30px;
+    padding-top: 200px;
+    background-color: transparent;
 }
 .headshot-picture {
     padding-left: 100px;
@@ -141,6 +160,7 @@ body{
     padding-bottom: 180px;
     flex: 1;
     max-width: 375px;
+    margin-top: -100px;
 }
 .introduction-text {
     font-size: 19px;
@@ -148,28 +168,23 @@ body{
     padding-bottom: 300px;
     padding-right: 100px;
     padding-top: 30px;
-    background-color: white;
     word-spacing: 4px;
     max-width: 900px;
 }
+
 .experience {
-    padding: 100px;
+    padding: 100px 50px; /* Adjust padding for better responsiveness */
+    scroll-margin-top: 75px;
+    background: #111;
+    color: #fff;
 }
+
 .experience .title {
+    font-size: 2.5em;
+    text-align: center;
     padding-bottom: 50px;
 }
-.experience, .projects{
-    color:#fff;
-    background: #111;
-}
-.experience .title::before,
-.projects .title::before{
-    background: #fff;
-}
-.experience .title {
-    font-size: 50px;
-    text-align: center;
-}
+
 .experience .experience-underline {
     width: 300px;
     margin-top: 10px !important;
@@ -177,42 +192,70 @@ body{
     background-color: black;
     margin: auto;
 }
-.experience .serv-content{
+
+.experience .serv-content {
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    flex-wrap: wrap; /* Allow wrapping of cards */
+    justify-content: center; /* Center content */
+    padding-bottom: 50px;
 }
 
-.experience .serv-content .card{
-    width: 370px;
+.experience .serv-content .card {
     background: #222;
     text-align: center;
     border-radius: 6px;
-    padding: 50px 25px;
+    padding: 75px;
     transition: all 0.3s ease;
-    margin: 10px 5px;
+    margin: 10px;
+    flex: 1 1 calc(33.333% - 40px); /* Responsive card size */
+    box-sizing: border-box;
 }
-.experience .serv-content .card:hover{
+
+.experience .serv-content .card:hover {
     background: limegreen;
 }
-.experience .serv-content .card .box{
+
+.experience .serv-content .card .box {
     transition: all 0.3s ease;
 }
-.experience .serv-content .card:hover .box{
+
+.experience .serv-content .card:hover .box {
     transform: scale(1.05);
 }
-.experience .serv-content .card i{
+
+.experience .serv-content .card i {
     font-size: 50px;
     color: limegreen;
     transition: color 0.3s ease;
 }
-.experience .serv-content .card:hover i{
+
+.experience .serv-content .card:hover i {
     color: #fff;
 }
-.experience .serv-content .card .text{
-    font-size: 25px;
+
+.experience .serv-content .card .text {
+    font-size: 1.25em;
     font-weight: 500;
     margin: 10px 0 7px 0;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 1200px) {
+    .experience .serv-content .card {
+        flex: 1 1 calc(50% - 40px); /* Adjust card size for medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .experience .serv-content .card {
+        flex: 1 1 calc(100% - 40px); /* Adjust card size for small screens */
+    }
+    .experience {
+        padding: 20px 10px; /* Adjust padding for small screens */
+    }
+    .experience .title {
+        font-size: 2em;
+    }
 }
 
 .projects {
@@ -220,6 +263,7 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
+    scroll-margin-top: 75px;
 }
 
 .projects .projects-title {
@@ -324,6 +368,7 @@ body{
     background-color: black;
     padding: 50px;
     color: white;
+    scroll-margin-top: 75px;
 }
 
 .skills-title {
@@ -357,7 +402,7 @@ body{
     box-sizing: border-box;
 }
 
-.skill-imgs img {
+.skill-imgs img, .os-img img {
     display: inline-block;
     margin: 10px;
     max-width: 80px;
@@ -369,4 +414,68 @@ body{
     height: 2px;
     background-color: white;
     margin: 10px auto;
+}
+
+.contact-section {
+    color: honeydew;
+    background-color: white;
+    scroll-margin-top: 75px;
+    background: url(images/double-wave.png) no-repeat center top;
+    background-size: cover;
+}
+
+.contact-section .contact-title{
+    text-align: center;
+    font-size: 50px;
+    color: honeydew;
+    padding: 40px;
+}
+
+.contact-section .contact-me-underline {
+    width: 300px;
+    margin-top: 5px !important;
+    height: 4px;
+    background-color: honeydew;
+    margin: auto;
+}
+
+.contact-section .contact-subtext {
+    color: honeydew;
+    font-size: 24px;
+    text-align: center;
+    padding-top: 25px;
+}
+
+.contact-section .contact-subtext .contact-email {
+    margin-top: 30px;
+}
+
+.contact-section .contact-subtext .contact-email a {
+    font-size: 20px;
+    color: green;
+    text-decoration: none;
+    transition: all .8s ease in out;
+}
+
+.contact-section .contact-subtext .contact-email:hover {
+    font-weight: 500;
+}
+
+.contact-section .contact-icons {
+    text-align: center;
+    padding: 100px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.contact-section .contact-icons img {
+    height: 50px;
+    border-radius: 50%;
+    transition: transform 0.3s ease-in-out; /* Smooth transition for transform */
+}
+
+.contact-section .contact-icons img:hover {
+    transform: scale(1.2); /* Enlarge icons on hover */
 }
