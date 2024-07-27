@@ -21,7 +21,7 @@ $(document).ready(function () {
 
     $('.navbar .menu li a').click(function () {
         // applying again smooth scroll on menu items click
-        $('html').css("scrollBehavior", "smooth");
+        $('html').css("scrollBehavior", 10);
     });
 
     // toggle menu/navbar script

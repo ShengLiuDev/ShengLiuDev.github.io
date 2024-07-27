@@ -13,257 +13,160 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
     <script src="app.js"></script>
     
 </head>
 <body>
-    <div id="header">
-        <nav class="navbar">
+    <div class="wrapper">
+        <div id="header">
+            <!-- <nav class="navbar">
+                <div class="max-width">
+                    <ul class="menu">
+                        <li>
+                            <a href="#home" class="menu-btn">Home</a>
+                        </li>
+                        <li>
+                            <a href="#about" class="menu-btn" input type="button" onclick="document.getElementById('introduction-container').scrollIntoView;">About</a>
+                        </li>
+                        <li>
+                            <a href="#experience" class="menu-btn" input type="button" onclick="document.getElementById('introduction-container').scrollIntoView;">Experience</a>
+                        </li>
+                        <li>
+                            <a href="#projects" class="menu-btn" input type="button" onclick="document.getElementById('introduction-container').scrollIntoView;">Projects</a>
+                        </li>
+                        <li>
+                            <a href="#skills" class="menu-btn" input type="button" onclick="document.getElementById('introduction-container').scrollIntoView;">Skills</a>
+                        </li>
+                        <li>
+                            <a href="#contact" class="menu-btn" input type="button" onclick="document.getElementById('introduction-container').scrollIntoView;">Contact</a>
+                        </li>
+                        <li class="linkedin-github-logos">
+                            <a href="https://github.com/ShengLiuDev" title="Github profile">
+                                <img src="images/nav-bar/github.png" height="45" alt="Github">
+                            </a>
+                        </li>
+                        <li class="linkedin-github-logos">
+                            <a href="https://www.linkedin.com/in/shengliu2/" title="Linkedin Profile">
+                                <img src="images/nav-bar/linkedin.png" height="45" alt="Linkedin">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav> -->
+            <section class="home" id="home">
+                <div class="spanning-text-intro">
+                    <div class="home-content">
+                            <div class="text-1"> Hello, my name is</div>
+                            <div class="text-2"> Sheng Liu</div>
+                            <div class="text-3">
+                                And I'm a <span class="typing"></span>
+                            </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        
+        <div class="about-skills-container">
+            <section class="introduction-container" id='about'>
+                <div class="svg-title-container">
+                    <div class="about-me">
+                        About Me
+                        <hr class="about-me-underline">
+                    </div>
+                </div>
+                <div class="headshot-introduction-section">
+                    <div class="headshot-picture">
+                        <img src="images/headshot.png" height="390" alt="headshot">
+                    </div>
+                </div>
+                <div class="introduction-text">
+                    I'm a developer, designer, and student inspired by the world around me
+                    <button class="more-about-me">
+                        more about me <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            </section>
+            <section class="skills-tools-container">
+                <div class="skills-tools-title">
+                    Skills/Tools <i class="fa-solid fa-screwdriver-wrench"></i>
+                    <hr class="skills-tools-underline">
+                </div>
+                <div class="skills-list">
+                    <p>Python</p>
+                    <p>React</p>
+                    <p>HTML</p>
+                    <p>Css</p>
+                    <p>Javascript</p>
+                    <p>C++</p>
+                    <p>Java</p>
+                </div>
+                <div class="tools-title">
+                    <p>Git</p>
+                    <p>Github</p>
+                    <p>MongoDB</p>
+                    <p>Firebase</p>
+                    <p>Node.js</p>
+                    <p>Bootstrap</p>
+                </div>
+            </section>
+        </div>
+
+        <section class="experience" id="experience">
             <div class="max-width">
-                <ul class="menu">
-                    <li>
-                        <a href="#home" class="menu-btn">Home</a>
-                    </li>
-                    <li>
-                        <a href="#about" class="menu-btn" input type="button" onclick="document.getElementById('introduction-container').scrollIntoView;">About</a>
-                        <!-- <input type="button" onClick="document.getElementById('middle').scrollIntoView();"/> -->
-                    </li>
-                    <li>
-                        <a href="#experience" class="menu-btn" input type="button" onclick="document.getElementById('introduction-container').scrollIntoView;">Experience</a>
-                    </li>
-                    <li>
-                        <a href="#projects" class="menu-btn" input type="button" onclick="document.getElementById('introduction-container').scrollIntoView;">Projects</a>
-                    </li>
-                    <li>
-                        <a href="#skills" class="menu-btn" input type="button" onclick="document.getElementById('introduction-container').scrollIntoView;">Skills</a>
-                    </li>
-                    <li>
-                        <a href="#contact" class="menu-btn" input type="button" onclick="document.getElementById('introduction-container').scrollIntoView;">Contact</a>
-                    </li>
-                    <li class="linkedin-github-logos">
-                        <a href="https://github.com/ShengLiuDev" title="Github profile">
-                            <img src="images/nav bar/github.png" height="45" alt="Github">
-                        </a>
-                    </li>
-                    <li class="linkedin-github-logos">
-                        <a href="https://www.linkedin.com/in/shengliu2/" title="Linkedin Profile">
-                            <img src="images/nav bar/linkedin.png" height="45" alt="Linkedin">
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-        <section class="home" id="home">
-            <div class="max-width">
-                <div class="home-content">
-                        <div class="text-1"> Hello, my name is</div>
-                        <div class="text-2"> Sheng Liu</div>
-                        <div class="text-3">
-                            And I'm a <span class="typing"></span>
+                <h2 class="title">My Experience</h2>
+                <!-- <hr class="experience-underline"> -->
+                <div class="serv-content">
+                    <div class="card">
+                        <div class="box">
+                            <i class="fas fa-code"></i>
+                            <div class="text">Full-Stack</div>
+                            <p>Designing/Building websites</p>
                         </div>
+                    </div>
+                    <div class="card">
+                        <div class="box">
+                            <i class="fas fa-brain"></i>
+                            <div class="text">Artificial Intelligence</div>
+                            <p>Creating/Training A.I Models</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="box">
+                            <i class="fas fa-chart-line"></i>
+                            <div class="text">Data Scientist</div>
+                            <p>Collecting/Analyzing data</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
+        <section class="contact-section" id="contact">
+            <div class="svg-title-container">
+                <h2 class="contact-title">
+                    Contact
+                    <hr class="contact-me-underline">
+                </h2>
+            </div>
+            <div class="contact-subtext">
+                Get in touch with me here!
+                <div class="contact-email">
+                    <a href="mailto:sheng.liu.0841@gmail.com">sheng.liu.0841@gmail.com</a>
+                </div>
+            </div>
+            <div class="contact-icons">
+                <a href="https://www.linkedin.com/in/shengliu2/" title="Linkedin Profile">
+                    <img src="images/nav bar/linkedin.png" alt="Linkedin">
+                </a>
+                <a href="https://github.com/ShengLiuDev" title="Github Profile">
+                    <img src="images/nav bar/github-logo-transparent.png" alt="Github">
+                </a>
+                <a href="images/Sheng_Liu_Resume.pdf" title="Resume" download>
+                    <img src="images/nav bar/resume.png" alt="Resume">
+                </a>
+            </div>
+        </section>
     </div>
-    <section class="introduction-container" id='about'>
-        <!-- <img src="images/double-wave.png"> -->
-        <div class="svg-title-container">
-            <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#4c6444" fill-opacity="1" d="M0,96L48,117.3C96,139,192,181,288,202.7C384,224,480,224,576,202.7C672,181,768,139,864,149.3C960,160,1056,224,1152,218.7C1248,213,1344,139,1392,101.3L1440,64L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg> -->
-            <div class="about-me">
-                About Me
-                <hr class="about-me-underline">
-            </div>
-        </div>
-        <div class="headshot-introduction-section">
-            <div class="headshot-picture">
-                <img src="images/headshot.png" height="390" alt="headshot" style="border-radius: 1%">
-            </div>
-            <div class="introduction-text">
-                I'm currently pursuing a bachelors in Computer Science at the University of Florida. I have experience in 
-                creating full stack applications such as my Calorie Counter Companion web application, and my Historic Stock Trading 
-                Volume application. I also have experience in working with databases such as MongoDB, Firebase, and version 
-                control systems such as Git and Github. 
-                <br>
-                <br>
-                I have experience with C++, Python, React, HTML, CSS, and Javascript. 
-                <br>
-                <br>
-                In my freetime I enjoy cooking as its a passion of mine, stock trading, and working on projects that solve 
-                real-world problems. 
-            </div>
-        </div>
-    </section>
-    <section class="experience" id="experience">
-        <div class="max-width">
-            <h2 class="title">My Experience</h2>
-            <!-- <hr class="experience-underline"> -->
-            <div class="serv-content">
-                <div class="card">
-                    <div class="box">
-                        <i class="fas fa-code"></i>
-                        <div class="text">Full-Stack</div>
-                        <p>Designing/Building websites</p>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="box">
-                        <i class="fas fa-brain"></i>
-                        <div class="text">Artificial Intelligence</div>
-                        <p>Creating/Training A.I Models</p>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="box">
-                        <i class="fas fa-chart-line"></i>
-                        <div class="text">Data Scientist</div>
-                        <p>Collecting/Analyzing data</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="projects" id="projects">
-        <div class="projects-title">
-            Projects
-            <hr class="projects-underline">
-        </div>
-        <div class="max-width2">
-            <div class="flip-card">
-                <div class="flip-card-inner">
-                    <div class="flip-card-front">
-                        <img src="images/projects/stock_chart.png" alt="stock-project" style="width: 300px;height:300px;border-radius: 20%;background: none;">
-                    </div>
-                    <div class="flip-card-back">
-                        <div class="project-name">Stock Analysis Visualizer</div>
-                        <p class="project-description">Created web application that analyzes stocks across the global market
-                            and recommends a stock for users based off many factors such greeks and volatility. 
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="flip-card">
-                <div class="flip-card-inner">
-                    <div class="flip-card-front">
-                        <img src="images/projects/calorie-counter-companion-logo.png" alt="ccc-project" style="width: 300px;height:300px;">
-                    </div>
-                    <div class="flip-card-back">
-                        <div class="project-name"div>Calorie Counter Companion</div>
-                        <p class="project-description">CCC is a web app that contains recipes and caloric information on food. It allows users to create 
-                            accounts and track their individual caloric intake along with submiting their own recipes. 
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="flip-card">
-                <div class="flip-card-inner">
-                    <div class="flip-card-front">
-                        <img src="images/projects/eyeball.png" alt="ccc-project" style="width: 300px;height:300px;">
-                    </div>
-                    <div class="flip-card-back">
-                        <div class="project-name">AI Assistant For The Visually Impaired</div>
-                        <p>
-                            Created mobile application that allowed visually impaired individuals 
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="project-readmore-relink">
-            Read More Here
-        </div>
-    </section>
-    <section class="skills" id="skills">
-            <div class="skills-title">
-                My Skills
-                <!-- <hr class="skills-title-underline"> -->
-            </div>
-            <div class="all-skills-section">
-                <div class="skills-individual-sections">
-                    <div class="skills-titles">
-                        Languages
-                    </div>
-                    <hr class="skills-sections-underlines">
-                    <div class="skill-imgs">
-                        <img src="images/programming-languages/python.png" >
-                        <img src="images/programming-languages/c++.png">
-                        <img src="images/programming-languages/java.png">
-                        <img src="images/programming-languages/javascript.png">
-                        <img src="images/programming-languages/c.png">
-                        <!-- <img src="images/react.png">
-                        <img src="images/css.png"> -->
-                    </div>
-                </div>
-                <div class="skills-individual-sections">
-                    <div class="skills-titles">
-                        Dev Ops
-                    </div>
-                    <hr class="skills-sections-underlines">
-                    <div class="skill-imgs">
-                        <img src="images/dev-ops/git-icon.png" >
-                        <img src="images/dev-ops/github-logo2.png" style="background-color: white; border-radius: 50%;">
-                    </div>
-                </div>
-                <div class="skills-individual-sections">
-                    <div class="skills-titles">
-                        Front End
-                    </div>
-                    <hr class="skills-sections-underlines">
-                    <div class="skill-imgs">
-                        <img src="images/front-end/html.png">
-                        <img src="images/front-end/css.png">
-                        <img src="images/front-end/react.png">
-                        <img src="images/front-end/bootstrap.png">
-                    </div>
-                </div>
-                <div class="skills-individual-sections">
-                    <div class="skills-titles">
-                        Back End Databases
-                    </div>
-                    <hr class="skills-sections-underlines">
-                    <div class="skill-imgs">
-                        <img src="images/back-end-databases/nodejs.png">
-                        <img src="images/back-end-databases/mongodb.png">
-                        <img src="images/back-end-databases/firebase-react.png">
-                        <img src="images/back-end-databases/postman.png">
-                    </div>
-                </div>
-                <div class="skills-individual-sections">
-                    <div class="skills-titles">
-                        Operating Systems
-                    </div>
-                    <hr class="skills-sections-underlines">
-                    <div class="os-img">
-                        <img src="images/operating-systems/macos.png" style="height: 100px; width: 100px;">
-                        <img src="images/operating-systems/windowsos2.png" style="height: 100px; width: 100px;">
-                    </div>
-                </div>
-            </div>
-    </section>
-    <section class="contact-section" id="contact">
-        <div class="svg-title-container">
-            <h2 class="contact-title">
-                Contact
-                <hr class="contact-me-underline">
-            </h2>
-        </div>
-        <div class="contact-subtext">
-            Get in touch with me here!
-            <div class="contact-email">
-                <a href="mailto:sheng.liu.0841@gmail.com">sheng.liu.0841@gmail.com</a>
-            </div>
-        </div>
-        <div class="contact-icons">
-            <a href="https://www.linkedin.com/in/shengliu2/" title="Linkedin Profile">
-                <img src="images/nav bar/linkedin.png" alt="Linkedin">
-            </a>
-            <a href="https://github.com/ShengLiuDev" title="Github Profile">
-                <img src="images/nav bar/github-logo-transparent.png" alt="Github">
-            </a>
-            <a href="images/Sheng_Liu_Resume.pdf" title="Resume" download>
-                <img src="images/nav bar/resume.png" alt="Resume">
-            </a>
-        </div>
-    </section>
     
 </body>
 
