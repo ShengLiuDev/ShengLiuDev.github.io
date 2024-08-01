@@ -26,7 +26,7 @@ body{
     height: 100vh;
     background-image: url(images/nav-bar/lake_tree.jpg);
     margin: 0 auto;
-    margin: 5rem;
+    margin: 50px;
     margin-left: auto;
     margin-right: auto;
     border-radius: 3rem;
@@ -95,8 +95,7 @@ body{
     flex: 1;
     min-width: 300px;
     max-width: 700px;
-    height: 100%;
-    margin: 20px; 
+    /* margin-right: 50px; */
     border-radius: 3rem;
     background-size: cover;
     background-position: center;
@@ -237,11 +236,11 @@ body{
     left: 5px; 
 }
 
-.skills-tools-container {
+.skills-container {
     flex: 1;
     width: 700px;
     height: 700px;
-    margin: 20px; 
+    margin-left: 50px;
     border-radius: 3rem;
     background-size: cover;
     background-position: center;
@@ -251,17 +250,19 @@ body{
     flex-direction: column;
     align-items: center;
     padding: 2rem;
+    justify-content: flex-start;
 }
 
-.skills-tools-title {
+.skills-title {
     font-size: 50px;
     text-align: center;
     font-weight: bold;
     color: black;
     white-space: nowrap; 
+    margin: 0 auto;
 }
 
-.skills-tools-underline {
+.skills-underline {
     width: 290px;
     margin-top: 5px !important;
     height: 4px;
@@ -270,121 +271,70 @@ body{
     border: none;
 }
 
-.skills-tools-content {
+.skills-content {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     width: 100%;
     margin-top: 2rem;
 }
 
-.skills-list, .tools-title {
+.skills-list, .tools-list {
     flex: 1;
     text-align: left;
     padding: 0 2rem;
 }
 
-.skills-list p, .tools-title p {
-    font-size: 24px;
+.skills-list img {
+    width: 40px;
+    height: auto;
+    margin-top: 10px;
+    margin-bottom: -10px;
+}
+
+.tools-list img {
+    width: 40px;
+    height: auto;
+    margin-top: 10px;
+    margin-bottom: -10px;
+}
+
+.skills-list p, .tools-list p {
+    font-size: 36px;
     margin: 0.5rem 0;
+    font-weight: 500;
 }
 
 .vertical-line {
     width: 2px;
-    background-color: #277FD8;
+    background-color: black;
     height: 100%;
+    margin: 0 2rem;
 }
+
 
 /* Responsive adjustments */
 @media (max-width: 900px) {
-    .about-skills-container {
+    .about-container {
         flex-direction: column;
         align-items: center;
     }
 
     .introduction-container,
-    .skills-tools-container {
+    .skills-container {
         max-width: 100%;
         margin: 10px 0;
     }
 
-    .skills-tools-title {
+    .skills-title {
         font-size: 36px;
     }
 
     .skills-list,
-    .tools-title {
+    .tools-list {
         font-size: 20px;
         text-align: center;
     }
-}
-
-
-.experience {
-    padding: 100px 50px; /* Adjust padding for better responsiveness */
-    scroll-margin-top: 75px;
-    background: #111;
-    color: #fff;
-}
-
-.experience .title {
-    font-size: 2.5em;
-    text-align: center;
-    padding-bottom: 50px;
-}
-
-.experience .experience-underline {
-    width: 300px;
-    margin-top: 10px !important;
-    height: 4px;
-    background-color: black;
-    margin: auto;
-}
-
-.experience .serv-content {
-    display: flex;
-    flex-wrap: wrap; /* Allow wrapping of cards */
-    justify-content: center; /* Center content */
-    padding-bottom: 50px;
-}
-
-.experience .serv-content .card {
-    background: #222;
-    text-align: center;
-    border-radius: 6px;
-    padding: 75px;
-    transition: all 0.3s ease;
-    margin: 10px;
-    flex: 1 1 calc(33.333% - 40px); /* Responsive card size */
-    box-sizing: border-box;
-}
-
-.experience .serv-content .card:hover {
-    background: limegreen;
-}
-
-.experience .serv-content .card .box {
-    transition: all 0.3s ease;
-}
-
-.experience .serv-content .card:hover .box {
-    transform: scale(1.05);
-}
-
-.experience .serv-content .card i {
-    font-size: 50px;
-    color: limegreen;
-    transition: color 0.3s ease;
-}
-
-.experience .serv-content .card:hover i {
-    color: #fff;
-}
-
-.experience .serv-content .card .text {
-    font-size: 1.25em;
-    font-weight: 500;
-    margin: 10px 0 7px 0;
 }
 
 .contact-section {
