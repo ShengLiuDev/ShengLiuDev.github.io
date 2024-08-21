@@ -6,6 +6,12 @@
     font-family: "Poppins", sans-serif;
     box-sizing: border-box;
 }
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
 html{
     scroll-behavior: smooth;
 }
@@ -98,28 +104,28 @@ body{
 
 @media (max-width: 600px) {
     .home {
-        padding: 0px 80px; /* Even smaller padding for smaller screens */
+        padding: 0px 70px; /* Even smaller padding for smaller screens */
         
     }
 
     .text-1 {
         margin-top: 30%;
-        font-size: 20px;
+        font-size: 18px;
     }
 
     .text-2 {
         font-weight: bold;
-        font-size: 32px;
+        font-size: 28px;
         margin-top: 5px;
     }
 
     .home .home-content .text-3 {
-        font-size: 24px !important;
+        font-size: 20px !important;
         margin-top: 10px !important;
     }
 
     .text-3 span {
-        font-size: 24px;
+        font-size: 20px;
         margin-top: 10px;
     }
 }
@@ -408,23 +414,6 @@ body{
         width: 35px;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .contact-section {
     color: black;
