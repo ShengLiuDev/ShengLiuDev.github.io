@@ -426,6 +426,7 @@ body{
     scroll-margin-top: 75px;
     background: url(images/double-wave.png) no-repeat center top;
     background-size: cover;
+    border-radius: 3rem;
 }
 
 .contact-section .contact-title{
